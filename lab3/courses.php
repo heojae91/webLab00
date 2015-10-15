@@ -40,6 +40,9 @@
             }
             if (isset($_GET['number_of_courses'])) {
                 $numberOfCourses = $_GET['number_of_courses'];
+                if ($_GET['number_of_courses'] == "") {
+                    $numberOfCourses = 3;
+                }
             } else {
                 $numberOfCourses = 3;
             }
@@ -76,6 +79,9 @@
                 $inputChar = "C";
                 if (isset($_GET['character'])) {
                     $inputChar = $_GET['character'];
+                    if ($_GET['character'] == "") {
+                        $inputChar = "C";
+                    }
                 } else {
                     $inputChar = "C";
                 }
@@ -113,6 +119,9 @@
             }
             if (isset($_GET['orderby'])) {
                 $startCharacter = $_GET['orderby'];
+                if ($_GET['orderby'] == "") {
+                    $startCharacter == 0;
+                }
             } else {
                 $startCharacter = 0;
             }
@@ -138,7 +147,7 @@
         <h2>Adding Courses</h2>
 <!-- Ex. 5: Adding Courses & Ex 6: Query Parameters -->
         <?php
-            if (isset($_GET['new_course']) && isset($_GET['code_of_course'])) {
+            if ((isset($_GET['new_course']) && isset($_GET['code_of_course'])) && ($_GET['new_course'] != "") && ($_GET['code_of_course'] != "")) {
                 $newCourse = $_GET['new_course'];
                 $codeOfCourse = $_GET['code_of_course'];
                 $courseAdd = $newCourse."\t".$codeOfCourse."\n";
