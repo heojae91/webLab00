@@ -1,0 +1,376 @@
+#brand .fa-facebook {
+    color:#3b5998;
+}
+#brand .fa-twitter {
+    color:#55acee;
+}
+#brand .fa-google {
+    color : #dd4b39;
+}
+#brand .fa-pinterest{
+    color : #c8232c;
+}
+#brand .fa-instagram {
+    color :#3f729b;
+}
+#brand .fa-tumblr{
+    color : #34526f;
+}
+#search-wrap{
+    padding :0;
+    overflow: hidden;
+    float : none;
+    position: relative;
+}
+#search-wrap input{
+    border : none;
+    padding: 0.65em 0.75em;
+    font-size: 16px;
+    background-color: white;
+    width: 94%;
+    z-index: 1;
+}
+
+#search-wrap button {
+    border : none;
+    background-color: white;
+    top :3px;
+    right : 4px;
+    padding: 0.65em 0.75em;
+    position: absolute;
+    font-size: 13px;
+    z-index: 2;
+}
+
+html {
+    font-family: Brown, verdana, sans-serif;
+}
+
+body - header{
+    margin: 0;
+    padding: 0px;
+}
+
+header {
+    background-color: black;
+    overflow: auto;
+}
+
+header > div{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+body > div:nth-child(2){
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+body > footer {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+header > div > div {
+    background-color: black;
+    color: white;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 30px;
+    float : left;
+}
+
+header>div>div:hover {
+    color: #1cace2;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#mf {
+    color: #ff6567;
+}
+
+/* 브랜드 전체 */
+#brand {
+    padding-top: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    clear: all;
+}
+
+/* 브랜드에 있는 빌보드 그림 */
+#brand > a > img {
+    width: 300px;
+    height: 62px;
+}
+
+/* 브랜드 안에 있는 SNS */
+#brand > div {
+    margin-top: 45px;
+    float: right;
+}
+
+#brand > div > a {
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+}
+
+nav div {
+    float: left;
+    border: 1px #D9D9D8 solid;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+    padding-left: 0.72em;
+    padding-right: 0.72em;
+}
+
+nav div:nth-child(n+2) {
+    margin-left: -1px;
+}
+
+nav div:last-child {
+    padding: none;
+}
+
+nav div:hover {
+    border: 2px black solid;
+    margin-left: 0px;
+}
+
+/* weekbar 색깔입히기 + 정렬 */
+#weekbar {
+    background-color: black;
+    text-align: center;
+    color: white;
+    display: block;
+    overflow: auto;
+}
+
+
+#weekbar > div > div {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* weekbar에 들어갈 SNS 아이콘 */
+#weekbar > div .fa {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.25em;
+    float: left;
+}
+
+#weekbar .fa-facebook {
+    background-color: #3b5998;
+}
+
+#weekbar .fa-twitter {
+    background-color: #55acee;
+    margin-left: 0.25em;
+}
+
+/* 여기서부터 사이드바 */
+aside {
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: right;
+    width: 300px;
+}
+
+/* 사이드바의 별표 */
+aside .fa-star { 
+    color: black;
+}
+
+aside > div:not(:nth-child(1)) {
+    float: left;
+}
+/* 사이드바의 제목 */
+aside > div:nth-child(1) { 
+    background-color: #484647;
+    padding: 0.75em;
+}
+
+/* 사이드바의 각 행 */
+aside > div > div { 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px #989898 solid;
+    height: 100px;
+}
+
+/* 사이드바의 각 행의 제목 */
+aside > div > div > div:nth-child(1) { 
+    color: #989898;
+    padding: 1em;
+}
+
+
+/* rank division */
+aside > div > div > div:nth-child(2) { 
+    width: 45px;
+    font-size: 2em;
+    margin-top: 6px;
+    text-align: center;
+}
+
+/* 앨범 이미지 */
+aside > div > div > div > img {
+    width: 2.5em;
+    height: 2.5em;
+    margin: 6px;
+}
+
+/* 가수와 제목을 싸고 있는것 */
+aside > div > div > div {
+    width: 192px;
+    margin: none;
+}
+
+/* 노래 제목 + 아티스트 */
+aside > div > div > div > p > span {
+    display: block;
+}
+
+/* 노래제목 */
+aside > div > div > div > p > span:nth-child(1) {
+    font-size: 1em;
+}
+
+/* 아티스트명 */
+aside > div > div > div > p > span:nth-child(2) {
+    font-size: 12px;
+    color: #1cace2;
+}
+
+aside .fa-play {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border: 2px white solid;
+    border-radius: 50%;
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+aside > div > div > div:not(:nth-child(1)){
+    float: left;
+}
+
+/* 메인 차트 */
+article {
+    margin-top: 10px;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 메인 차트 내부 각 열 */
+article > div > div {
+    height: 104px;
+    border-top: 1px #CDCDCD solid;
+    border-bottom: 1px white solid;
+}
+
+/* 히스토리 디비젼 */
+article > div > div:nth-child(1) {
+    width: 34px;
+    height: 104px;
+    text-align: center;
+    color: #8c8e90;
+    background-color: rgb(231, 231, 231);
+}
+
+/* 화살표들 */
+.fa-arrow-up {
+    color: #05c648;
+}
+
+.fa-arrow-down {
+    color: #f93c33;
+}
+/* 랭크 디비젼 */
+article > div > div:nth-child(2) {
+    width: 100px;
+/*    margin-top: 10px;*/
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 랭크와 지난주를 묶어서 블록으로 */
+article > div > div:nth-child(2) > span {
+    display: block;
+}
+
+/* 랭크 폰트 */
+article > div > div:nth-child(2) > span:nth-child(1) {
+    font-size: 62px;
+    text-align: center;
+}
+
+/* 지난주 랭크 폰트 */
+article > div > div:nth-child(2) > span:nth-child(2) {
+    font-size: 12.4px;
+    color: #989898;
+    line-height: 1;
+}
+
+/* 앨범 커버 */
+article > div > div > img {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 12px;
+    width: 91px;
+    height: 91px;
+}
+
+/* 앨범 제목 / 가수명을 블록으로 */
+article > div > div:nth-child(3) > p > span {
+    display: block;
+}
+
+/* 앨범 제목 폰트크기 */
+article p > span:nth-child(1) {
+    font-size: 24px;
+}
+
+/* 아티스트 폰트 */
+article p > span:nth-child(2) {
+    font-size: 16px;
+    color: #1cace2;
+}
+
+/* 재생버튼 */
+article .fa-play {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border: 2px black solid;
+    border-radius: 50%;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-right: 10px;
+    text-align: center;
+    float: right;
+}
+
+footer {
+    background-color: black;
+    float: right;
+    overflow: auto;
+}
+
+article {
+    overflow: auto;
+}
+
+article > div > div:not(:last-child) {
+    float: left;
+}

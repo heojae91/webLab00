@@ -1,0 +1,381 @@
+#brand .fa-facebook {
+    color:#3b5998;
+}
+#brand .fa-twitter {
+    color:#55acee;
+}
+#brand .fa-google {
+    color : #dd4b39;
+}
+#brand .fa-pinterest{
+    color : #c8232c;
+}
+#brand .fa-instagram {
+    color :#3f729b;
+}
+#brand .fa-tumblr{
+    color : #34526f;
+}
+#search-wrap{
+    padding :0;
+    overflow: hidden;
+    float : none;
+    position: relative;
+}
+#search-wrap input{
+    border : none;
+    padding: 0.65em 0.75em;
+    font-size: 16px;
+    background-color: white;
+    width: 94%;
+    z-index: 1;
+}
+
+#search-wrap button {
+    border : none;
+    background-color: white;
+    top :3px;
+    right : 4px;
+    padding: 0.65em 0.75em;
+    position: absolute;
+    font-size: 13px;
+    z-index: 2;
+}
+
+body {
+    font-family: Brown, verdana, sans-serif;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+body :not(header, footer) {
+    max-width: 1024px;
+}
+
+header {
+    background-color: black;
+    color: white;
+    overflow: auto;
+}
+
+header > div > div:last-child {
+    color: #ff6567;
+    float: right;
+}
+
+header > div > div:hover {
+    color: #1cace2;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+header > div > div {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 30px;
+
+}
+
+header > div > div {
+    background-color: black;
+    color: white;
+    float: left;
+}
+
+#brand {
+    padding-top: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+#brand img {
+    width: 300px;
+    height: 62px;
+}
+
+#brand > div {
+    margin-top: 45px;
+    float: right;
+}
+
+#brand > div > a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav > div:not(:last-child) {
+    float: left;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+    padding-left: 0.72em;
+    padding-right: 0.72em;
+}
+
+nav > div:last-child {
+    padding: none;
+}
+
+nav > div:hover {
+    margin-left: none;
+    border: 2px black solid;    
+}
+
+nav div:nth-child(n+2) {
+    margin-left: -1px;
+}
+
+nav div:nth-child(n+2):hover {
+    margin-right: 1px;
+}
+
+nav > div {
+    border: 1px #D9D9D8 solid;
+}
+
+#weekbar {
+    background-color: black;
+    text-align: center;
+    color: white;
+    display: block;
+    overflow: auto;
+}
+
+
+#weekbar > div > div {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* weekbar에 들어갈 SNS 아이콘 */
+#weekbar > div .fa {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    font-size: 1.25em;
+    float: left;
+}
+
+#weekbar .fa-facebook {
+    background-color: #3b5998;
+}
+
+#weekbar .fa-twitter {
+    background-color: #55acee;
+    margin-left: 0.25em;
+}
+
+aside {
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 300px;
+    float: right;
+}
+
+aside > div:first-child {
+    background-color: #484647;
+    padding: 0.75em;
+}
+
+aside .fa-star {
+    color: black;
+}
+
+aside > div:not(:first-child) > div {
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px #989898 solid;
+}
+
+aside > div:nth-child(2) > div > div:not(.row-header) {
+    float: left;
+}
+
+aside > div > div > div:first-child {
+    color: #989898;
+    padding: 1em;
+}
+
+aside > div > div > div:nth-child(2) {
+    width: 45px;
+    font-size: 2em;
+    margin-top: 6px;
+    text-align: center;
+}
+
+aside img {
+    width: 2.5em;
+    height: 2.5em;
+    margin: 6px;
+    float: left;
+}
+
+aside p {
+    width: 192px;
+    margin: 0 auto;
+}
+
+aside > div > div span {
+    display: block;
+}
+
+aside > div > div > div:nth-child(3) > p > span:first-child {
+    font-size: 1em;
+}
+
+aside > div > div > div:nth-child(3) > p > span:nth-child(2) {
+    font-size: 12px;
+    color: #1cace2;
+}
+
+aside .fa-play {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border: 2px white solid;
+    border-radius: 50%;
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: center;
+    float: right;
+}
+
+aside > div > div > div:not(:last-child :first-child) {
+    float: left;
+}
+aside > div > div > div:last-child {
+    float: right;
+}
+
+
+article {
+    overflow: auto;
+    margin-top: 10px;
+}
+
+article > div {
+    height: 104px;
+    border-top: 1px #CDCDCD solid;
+    border-bottom: 1px white solid;
+}
+
+article > div > div:first-child {
+    width: 34px;
+    line-height: 104px;
+    text-align: center;
+    color: #8c8e90;
+    background-color: rgb(231, 231, 231);
+    float: left;
+}
+
+.fa-arrow-up {
+    color: #05c648;
+}
+
+.fa-arrow-down {
+    color: #f93c33;
+}
+
+
+
+/* 여기서부터어어어어어어어어어어어어 */
+
+article > div > div:nth-child(2) {
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 0px auto;
+    float: left;
+}
+
+article > div > div:nth-child(2) > span {
+    display: block;
+}
+
+article > div > div:nth-child(2) > span:first-child {
+    font-size: 62px;
+    text-align: center;
+}
+
+article > div > div:nth-child(2) > span:last-child {
+    font-size: 12.4px;
+    color: #989898;
+    line-height: 1;
+    text-align: center;
+}
+
+article img {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 12px;
+    width: 91px;
+    height: 91px;
+    float: left;
+}
+
+article > div > div:nth-child(3) {
+    float: left;
+}
+
+article > div > div:nth-child(3) > p{
+    float: left;
+}
+article > div > div:nth-child(3) > p > span {
+    display: block;
+}
+article > div > div:nth-child(3) > p > span:first-child {
+    font-size: 24px;
+}
+
+article > div > div:nth-child(3) > p > span:last-child {
+    font-size: 16px;
+    color: #1cace2;
+}
+
+article .fa-play {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border: 2px black solid;
+    border-radius: 50%;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-right: 10px;
+    text-align: center;
+    float: right;
+}
+
+footer {
+    background-color: black;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+footer > div {
+    float: right;
+}
+
+header > div{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+body > div:nth-child(2){
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+body > footer {
+    margin: 0 auto;
+    margin-top: 30px;
+}
