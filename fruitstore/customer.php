@@ -182,6 +182,7 @@
 				$result = True;
 				$input = $_POST['name'];
 				$test1 = '/[a-zA-Z]*[a-zA-Z]/';
+				
 
 				if (preg_match($test1, $input) && !preg_match(pattern, subject)) {
 				}
