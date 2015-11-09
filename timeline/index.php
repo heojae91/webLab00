@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+require_once("timeline.php");
+$timeline = new TimeLine();
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,10 +15,10 @@
             <a href="index.php"><h1>Simple Timeline</h1></a>
             <div class="search">
                 <!-- Ex 3: Modify forms -->
-                <form method="GET" class="search-form">
+                <form method="GET" class="search-form" action="index.php">
                     <input type="submit" value="search">
-                    <input type="text" placeholder="Search">
-                    <select>
+                    <input type="text" placeholder="Search" name="contents">
+                    <select name="type">
                         <option>Author</option>
                         <option>Content</option>
                     </select>
@@ -22,93 +27,41 @@
             <div class="panel">
                 <div class="panel-heading">
                     <!-- Ex 3: Modify forms -->
-                    <form method="POST" class="write-form">
-                        <input type="text" placeholder="Author">
+                    <form method="POST" class="write-form" action="add.php">
+                        <input type="text" placeholder="Author" name="author">
                         <div>
-                            <input type="text" placeholder="Content">
+                           <input type="text" placeholder="Content" name="content">
                         </div>
                         <input type="submit" value="write">
                     </form>
                 </div>
                 <!-- Ex 3: Modify forms & Load tweets -->
+                <?php
+                if (isset($_GET['contents']) && !$_GET['contents']=="") {
+                    $rows = $timeline->searchTweets($_GET['type'], $_GET['contents']);
+                } else {
+                    $rows = $timeline->loadTweets();
+                }
+                foreach($rows as $row) { ?>
                 <div class="tweet">
-                    <form method="POST" class="delete-form">
+                    <form method="POST" class="delete-form" action="delete.php">
                         <input type="submit" value="delete">
-                        <input type="hidden">
+                        <?php
+                        print("<input type=\"hidden\" name=\"no\" value=\"$row[no]\">"); ?>
                     </form>
                     <div class="tweet-info">
-                        <span>Adele</span>
-                        <span>11:30:11 04/11/2015</span>
+                    <?php
+                        print ("<span> $row[author] </span>");
+                        print ("<span>".date('H:i:s Y/m/d', strtotime($row['time']))."</span>");
+                    ?>
                     </div>
                     <div class="tweet-content">
-                        Nevermind I'll find someone like you
+                    <?php
+                        print $row['contents'];
+                    ?>
                     </div>
                 </div>
-                <div class="tweet">
-                    <form class="delete-form">
-                        <input type="submit" value="delete">
-                        <input type="hidden">
-                    </form>
-                    <div class="tweet-info">
-                        <span>Adele</span>
-                        <span>11:30:11 04/11/2015</span>
-                    </div>
-                    <div class="tweet-content">
-                        Nevermind I'll find someone like you
-                    </div>
-                </div>
-                <div class="tweet">
-                    <form class="delete-form">
-                        <input type="submit" value="delete">
-                        <input type="hidden">
-                    </form>
-                    <div class="tweet-info">
-                        <span>Adele</span>
-                        <span>11:30:11 04/11/2015</span>
-                    </div>
-                    <div class="tweet-content">
-                        Nevermind I'll find someone like you
-                    </div>
-                </div>
-                <div class="tweet">
-                    <form class="delete-form">
-                        <input type="submit" value="delete">
-                        <input type="hidden">
-                    </form>
-                    <div class="tweet-info">
-                        <span>Adele</span>
-                        <span>11:30:11 04/11/2015</span>
-                    </div>
-                    <div class="tweet-content">
-                        Nevermind I'll find someone like you
-                    </div>
-                </div>
-                <div class="tweet">
-                    <form class="delete-form">
-                        <input type="submit" value="delete">
-                        <input type="hidden">
-                    </form>
-                    <div class="tweet-info">
-                        <span>Adele</span>
-                        <span>11:30:11 04/11/2015</span>
-                    </div>
-                    <div class="tweet-content">
-                        Nevermind I'll find someone like you
-                    </div>
-                </div>
-                <div class="tweet">
-                    <form class="delete-form">
-                        <input type="submit" value="delete">
-                        <input type="hidden">
-                    </form>
-                    <div class="tweet-info">
-                        <span>Adele</span>
-                        <span>11:30:11 04/11/2015</span>
-                    </div>
-                    <div class="tweet-content">
-                        Nevermind I'll find someone like you
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </body>
