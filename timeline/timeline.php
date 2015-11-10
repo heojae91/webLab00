@@ -33,16 +33,18 @@
             $stmt = $this->db->prepare($sql);
             $stmt->execute();
             $rows = $stmt->fetchAll();
-            preg_replace("/#([ㄱ-ㅎ가-힣A-Za-z0-9\/\.]*)/", "<a href=\"http://twitter.com/search?q=$1\">#$1</a>", $tweet);
+            foreach($rows as $row) {
+                $row['contents'] = preg_replace("/#([ㄱ-ㅎ가-힣A-Za-z0-9\/\_]*)/", "<a href=\"/index.php?contents=$1&type=Content\">#$1</a>", $row['contents']);
+            }   
             return $rows;
         }
         public function searchTweets($type, $query) // This function load tweets meeting conditions
         {
             //Fill out here
             if ($type == "Author") {
-                $sql = "SELECT author, time, contents FROM tweets WHERE author = '$query' ORDER BY time DESC ";
+                $sql = "SELECT no, author, time, contents FROM tweets WHERE author = '$query' ORDER BY time DESC ";
             } else if ($type == "Content") {
-                $sql = "SELECT author, time, contents FROM tweets WHERE contents LIKE '%$query%' ORDER BY time DESC";
+                $sql = "SELECT no, author, time, contents FROM tweets WHERE contents LIKE '%$query%' ORDER BY time DESC";
             }
             $stmt = $this->db->prepare($sql);
             $stmt->execute();

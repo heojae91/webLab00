@@ -38,6 +38,8 @@ $timeline = new TimeLine();
                 <!-- Ex 3: Modify forms & Load tweets -->
                 <?php
                 if (isset($_GET['contents']) && !$_GET['contents']=="") {
+                    $_GET['contents'] = htmlspecialchars($_GET['contents']);
+                    $_GET['contents'] = preg_replace("/'/", "&#39", $_GET['contents']);
                     $rows = $timeline->searchTweets($_GET['type'], $_GET['contents']);
                 } else {
                     $rows = $timeline->loadTweets();
@@ -57,7 +59,8 @@ $timeline = new TimeLine();
                     </div>
                     <div class="tweet-content">
                     <?php
-                        print $row['contents'];
+                        $row= preg_replace("/#([ㄱ-ㅎ가-힣A-Za-z0-9\/\_]*)/", "<a href=\"/index.php?contents=%23$1&type=Content\">#$1</a>", $row['contents']);
+                        print $row;
                     ?>
                     </div>
                 </div>

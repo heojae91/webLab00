@@ -13,9 +13,9 @@
             $timeline->add($tweet);
             header("Location:index.php"); // redirect to index.php
         } else {
-            header("Loaction:error.php");
+            header("Location:error.php");
         }
     } catch(Exception $e) {
-        header("Loaction:error.php");
+        header("Location:error.php");
     }
 ?>
