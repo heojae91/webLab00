@@ -1,0 +1,6 @@
+
+window.onload = function() {
+	document.getElementById("ok").onclick = function() {
+		alert($("p1").getStyle("font-size"));
+	};
+};   

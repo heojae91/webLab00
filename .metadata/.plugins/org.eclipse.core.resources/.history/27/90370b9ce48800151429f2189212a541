@@ -1,0 +1,7 @@
+
+window.onload = function() {
+	document.getElementById("ok").onclick = function() {
+		var p1 = document.getElementById("p1");
+		p1.parentNode.removeChild(p1);
+	};
+};   

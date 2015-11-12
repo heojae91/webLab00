@@ -1,0 +1,8 @@
+
+window.onload = function() {
+	document.getElementById("ok").onclick = function() {
+		
+		var ans = $("p1").ancestor();
+		alert(ans.length);
+	};
+};   

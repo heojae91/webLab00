@@ -1,0 +1,61 @@
+"use strict"
+var stack = [];
+window.onload = function () {
+    var displayVal = "0";
+    for (var i in $$('button')) {
+        $$('button')[i].onclick = function () {
+            var value = $(this).innerHTML;
+            
+            $('result').innerHTML = displayVal;
+        };
+    }
+}
+function isValidExpression(s) {
+
+}
+function infixToPostfix(s) {
+    var priority = {
+        "+":0,
+        "-":0,
+        "*":1,
+        "/":1
+    };
+    var tmpStack = [];
+    var result = [];
+    for(var i =0; i<stack.length ; i++) {
+        if(/^[0-9]+$/.test(s[i])){
+            result.push(s[i]);
+        } else {
+            if(tmpStack.length === 0){
+                tmpStack.push(s[i]);
+            } else {
+                if(s[i] === ")"){
+                    while (true) {
+                        if(tmpStack.last() === "("){
+                            tmpStack.pop();
+                            break;
+                        } else {
+                            result.push(tmpStack.pop());
+                        }
+                    }
+                    continue;
+                }
+                if(s[i] ==="(" || tmpStack.last() === "("){
+                    tmpStack.push(s[i]);
+                } else {
+                    while(priority[tmpStack.last()] >= priority[s[i]]){
+                        result.push(tmpStack.pop());
+                    }
+                    tmpStack.push(s[i]);
+                }
+            }
+        }
+    }
+    for(var i = tmpStack.length; i > 0; i--){
+        result.push(tmpStack.pop());
+    }
+    return result;
+}
+function postfixCalculate(s) {
+
+}

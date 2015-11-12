@@ -1,0 +1,11 @@
+.highlighted {
+	color: green;
+}
+
+.border {
+	border: 2px red solid;
+}
+
+.toggle {
+	background-color: yellow;
+}

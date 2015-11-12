@@ -1,0 +1,7 @@
+.highlighted {
+	color: red;
+}
+
+.border {
+	border: 2px red solid;
+}

@@ -1,0 +1,11 @@
+.highlighted {
+	color: red;
+}
+
+.border {
+	border: 2px red solid;
+}
+
+.bghighlight {
+	background-color: yellow;
+}

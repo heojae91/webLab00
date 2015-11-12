@@ -10,12 +10,11 @@
         }
         public function add($tweet) // This function inserts a tweet
         {
-            $sql = "INSERT INTO tweets(author, contents, time) VALUES(:author, :contents, :time)";
+            $sql = "INSERT INTO tweets(author, contents, time) VALUES(:author, :contents, now())";
             $stmt = $this->db->prepare($sql);
             date_default_timezone_set('Asia/Seoul');
             $stmt->execute(array('author'=>$tweet[0],
-                'contents'=>$tweet[1],
-                'time'=>date("Y-m-d H:i:s")));
+                'contents'=>$tweet[1]));
         }
         public function delete($no) // This function deletes a tweet
         {
