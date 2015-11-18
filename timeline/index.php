@@ -39,7 +39,6 @@ $timeline = new TimeLine();
                 <?php
                 if (isset($_GET['contents']) && !$_GET['contents']=="") {
                     $_GET['contents'] = htmlspecialchars($_GET['contents']);
-                    $_GET['contents'] = preg_replace("/'/", "&#39", $_GET['contents']);
                     $rows = $timeline->searchTweets($_GET['type'], $_GET['contents']);
                 } else {
                     $rows = $timeline->loadTweets();
@@ -54,12 +53,12 @@ $timeline = new TimeLine();
                     <div class="tweet-info">
                     <?php
                         print ("<span> $row[author] </span>");
-                        print ("<span>".date('H:i:s Y/m/d', strtotime($row['time']))."</span>");
+                        print ("<span>".date('H:i:s d/m/Y', strtotime($row['time']))."</span>");
                     ?>
                     </div>
                     <div class="tweet-content">
                     <?php
-                        $row= preg_replace("/#([ㄱ-ㅎ가-힣A-Za-z0-9\/\_]*)/", "<a href=\"/index.php?contents=%23$1&type=Content\">#$1</a>", $row['contents']);
+                        $row= preg_replace("/#([ㄱ-ㅎ가-힣A-Za-z0-9\/\_]+)/", "<a href=\"index.php?contents=$1&type=Content\">#$1</a>", $row['contents']);
                         print $row;
                     ?>
                     </div>

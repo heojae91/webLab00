@@ -1,0 +1,17 @@
+window.onload = function() {
+	document.getElementById("ok").onclick = function() {
+		var sn = $("contect")["sir_name"];
+		$("p1").innerHTML = $F(sn);
+		
+		if ($F("gn")).length > 7) {
+			$("gn").clear();
+		}
+	};
+};   
+
+<form id="newForm".....
+<input name="company" type = "adss"
+
+document.getElementById("newForm").getValue(document.querySelector(#newForm>input@name="company"))
+$("newForm").getValue(document.querySelector(#newForm>input@name="company"))
+$F("newForm")["company"]

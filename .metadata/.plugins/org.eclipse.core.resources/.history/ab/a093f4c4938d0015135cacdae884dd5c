@@ -7,7 +7,6 @@ window.onload = function() {
 		if ($F("gn").length > 7) {
 			$("gn").clear();
 		}
-		event.element().stopObserving(); // element에들어가야함 
 	});
 };   
 
