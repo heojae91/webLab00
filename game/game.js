@@ -7,6 +7,7 @@ var timer;
 
 document.observe('dom:loaded', function(){
 	for (var i in $$('div#trigger>div')) {
+		alert(i);
 		$$('div#trigger>div')[i].onclick = function () {
 			var trigger = $(this).id;
 			if (trigger == "start") {
